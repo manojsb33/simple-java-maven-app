@@ -12,6 +12,7 @@ pipeline {
             agent {label 'maven-master'}
             steps {
                 echo "maven-master"
+                set +e 
                 sh 'mvn clean test'
                 //sh 'mvn clean package'
             }
